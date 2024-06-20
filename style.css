@@ -1,0 +1,236 @@
+/* di solito il serif viene utilizzato per il titolo e sans serif per i paragrafi */
+h1{
+    font-family: "Orbitron", sans-serif;
+}
+p,h3,h4,h5,h2,a,button{
+    font-family: "Crete Round", serif;
+}
+a{
+    text-decoration: none !important;
+    color: var(---black);
+}
+/* utilizzare il : :root e utilizzare il var per richiamare il valore assegnato alla proprietà */
+:root{
+    ---greenwater : rgb(97, 216, 194);
+    ---tortora : rgb(197, 193, 182);
+    ---celeste :rgb(101, 196, 200);
+    ---brown : rgb(193, 133, 83);
+    ---black : rgb(11, 15, 15);
+}
+/* colore sfondo  non funziona il linear gradient pe l'ennesima volta */
+.bg-gradiente{
+    /* background: linear-gradient(rgb(25, 50, 77), rgb(162, 155, 149)); */
+    /* generatore online di linear gradient */
+    background: linear-gradient(90deg, rgb(197, 193, 182) 0%,  rgb(121, 148, 177) 35%,  rgb(197, 193, 182) 100%);
+}
+.bg-greenwater{
+    background-color: var(---greenwater);
+}
+.bg-tortora {
+    background-color: var(---tortora);
+}
+.bg-celeste{
+    background-color: var(---celeste);
+}
+.bg-brown{
+    background-color: var(---brown);
+}
+/* colore dei testi  */
+.tx-greenwater{
+    color: var(---greenwater);
+}
+.tx-tortora {
+    color: var(---tortora);
+}
+.tx-celeste{
+    color: var(---celeste);
+}
+.tx-brown{
+    color: var(---brown);
+}
+.tx-black{
+    color: var(---black);
+}
+/* INIZIO Navbar */
+/* LOGO  */
+.logo{
+    width: 80px;
+    height: 80px;
+    border-radius: 30px;
+}
+.navbar{
+    transition: 1s;
+    background-color: rgb(121, 148, 177);
+}
+/* questa classe è stata presa da dal sito ul.glass/generator/ utile per dare effetto specchiato alla nav  */
+.scrollnavbar{
+    margin: 10px;
+    border-radius: 25px;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: var(---tortora);
+    border: 1px solid rgba(209, 213, 219, 0.3);
+}
+
+/* header  */
+
+.bg-header{
+    background-image: url("./media/header.jpg");
+    background-size: cover;
+    
+}
+.stylecoltitle{
+    background-color: var(---brown);
+    width: 270px;
+    margin-top: 140px;
+    border-radius: 25px;
+}
+.heightrow{
+    min-height: 60vh;
+    margin-top: 10vh;
+    
+}
+.calltoaction{
+    background-color: rgb(203, 104, 144);
+    font-size: large;
+    font-weight: 600;
+    height: 7vh;
+    width: 30vh;
+    border-radius: 25px;
+    border: 2px solid;
+}
+
+
+/* inizio section con creazione di tre card  */
+
+.hrowsection{
+    min-height: 60vh;
+    width: 100%;
+    align-items:center ; 
+    justify-content: space-evenly;
+}
+.colon3cards{
+    /* height: 50vh; con il felx colon aligne items funziona al contrario*/ 
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    background-color:rgb(146, 126, 134);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.321);
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    /* justify-content: center; */
+    
+}
+.dimensioniimg {
+    height: 30vh;
+    width: 30vh;
+    border-radius: 25px;
+}
+
+
+/* stile degli elementi nella chiamata asincrona createintervall  */
+.number{
+    font-weight: 600;
+    font-size: x-large;
+    font-style: var(---tortora);
+}
+/* classe data ad img e presente nel index */
+.styleaereo{
+    transition: 10s;
+    transform: scale(70%) rotate(-20deg);
+} 
+/* classe data direttamente da js all'interno del intersectionobserver */
+.imgaereo{
+    transform:  rotate(0deg) scale(100%); 
+}
+
+
+
+/* sezione dedicata ai carusel */
+
+.swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+}
+/* card-carusel per recensione (ho dato al div le stesse dimensioni di default del carusel) */
+.reviewcard{
+    width: 300px; 
+    height: 250px;
+    background-color: var(---tortora); 
+    border-radius: 20px; 
+    box-shadow: 20px 20px 20px ;
+    display: flex; 
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: 1px solid;
+}
+
+
+/* STILE OGGETTI PAGINA ANNUNCI  */
+/* generazione delle card per la pagina annunci.html */
+
+.imgcard{
+    margin: 0%;
+    padding: 0%;
+    border-radius: 20px;
+    width: 200px;
+    height: 150px;
+    border: 2px solid;
+    border-right: none;
+}
+.cards{
+    
+    width: 200px;
+    height: 150px;
+    /* claymorphism preso dal sito hype4.accademy */
+    backdrop-filter: blur(5px); 
+    background-color: rgb(121, 148, 177); 
+    border-radius: 20px; 
+    box-shadow: 35px 35px 68px 0px rgba(145, 193, 255, 0.969), inset -8px -8px 16px 0px rgba(145, 192, 255, 0.6), inset 0px 11px 28px 0px rgba(255, 255, 255, 0.422);
+    border: 2px solid;
+    border-left: none;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-evenly; 
+    align-items: center;
+}
+.cardtitle{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.cardcategory{
+    color: black;
+    font-weight: 700;
+}
+.cardprice{
+    color: blue;
+}
+
+
+
+/* stile degli accordion della pagina annunci  */
+.accordionstyle{
+    width: 30vh;
+    border: 2px solid;
+    
+}
+
+/* filtra per parola */
+.iconbuttonsearch{
+    cursor: pointer;
+}
+
